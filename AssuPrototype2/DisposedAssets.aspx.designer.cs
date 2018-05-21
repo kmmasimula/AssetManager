@@ -13,12 +13,12 @@ namespace AssuPrototype2 {
     public partial class DisposedAssets {
         
         /// <summary>
-        /// AllAssetsPlaceHolder control.
+        /// DisposedAssetsPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder AllAssetsPlaceHolder;
+        protected global::System.Web.UI.WebControls.PlaceHolder DisposedAssetsPlaceHolder;
     }
 }
