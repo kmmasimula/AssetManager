@@ -26,7 +26,7 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>CE Number</label>
-                                            <input class="form-control" placeholder="Enter text">
+                                            <asp:TextBox ID="txtCeNum" runat="server" class="form-control" placeholder="CE Number"></asp:TextBox>
                                         </div>
                                     </form>
                                 </div>
@@ -35,7 +35,7 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Asset Name</label>
-                                            <input class="form-control" placeholder="Enter text">
+                                            <asp:TextBox ID="txtAssetname" runat="server" class="form-control" placeholder="Asset Name"></asp:TextBox>
                                         </div>
                                     </form>
                                 </div>
@@ -48,7 +48,7 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Asset Description</label>
-                                            <textarea class="form-control" rows="5"></textarea>
+                                            <textarea id="txtImagename1" name="txtImagename1" class="form-control" runat="server" rows="6"></textarea>
                                         </div>
                                     </form>
                                 </div>
@@ -57,19 +57,14 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Serial Number</label>
-                                            <input class="form-control" placeholder="Enter text">
+                                            <asp:TextBox ID="txtSerial" runat="server" class="form-control" placeholder="Serial Number"></asp:TextBox>
                                         </div>
                                     </form>
 
                                     <div class="form-group">
                                         <label>Asset Type</label>
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                        <asp:DropDownList ID="drpdwnAssetType" AppendDataBoundItems="true" class="form-control" runat="server"></asp:DropDownList>
+                                        <asp:ListItem Text="<Select Subject>" Value="0" />
                                     </div>
 
                                 </div>
@@ -87,31 +82,28 @@
                                     </form>
                                 </div>
 
-                                  <div class="form-group">
-                                      <div class="col-lg-6">
-                                        <label>Group Code</label>
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                          </div>
+                                <div class="form-group">
+                                    <div class="col-lg-6">
+                                         <div class="form-group">
+                                        <label>Asset Type</label>
+                                        <asp:DropDownList ID="drpdwnGroupCode" AppendDataBoundItems="true" class="form-control" runat="server"></asp:DropDownList>
+                                        <asp:ListItem Text="<Select Group Code>" Value="0" />
                                     </div>
+                                    </div>
+                                </div>
                                 <!-- /.row (nested) -->
                             </div>
-                            <asp:Button ID="BtnAddAsset" class="btn btn-primary btn-lg" runat="server" Text="Add Asset" />
-                            </div>
-                            <!-- /.panel-body -->
+                            <asp:Button ID="BtnAddAsset" class="btn btn-primary btn-lg" runat="server" Text="Add Asset" OnClick="BtnAddAsset_Click" />
                         </div>
-                        <!-- /.panel -->
+                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.col-lg-12 -->
+                    <!-- /.panel -->
                 </div>
-                <!-- /.row -->
+                <!-- /.col-lg-12 -->
             </div>
-            <!-- /#page-wrapper -->
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
     </form>
 
 

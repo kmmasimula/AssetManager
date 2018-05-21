@@ -13,5 +13,12 @@ namespace AssuPrototype2
         {
 
         }
+
+        protected void BtnAddAsset_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
     }
 }
