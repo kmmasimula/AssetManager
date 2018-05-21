@@ -18,15 +18,17 @@ namespace AssuPrototype2
         DataSet ds = new DataSet();
         StringBuilder htmlTable = new StringBuilder();
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["mycon"].ToString());
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+                BindData();
         }
 
         private void BindData()
         {
 
-            string query = "SELECT * FROM Assets WHERE AssetStatusID=3";
+            string query = "SELECT * FROM Assets WHERE AssetStatusID = 3";
             SqlCommand cmd = new SqlCommand(query, con);
             sda = new SqlDataAdapter(cmd);
             sda.Fill(ds);
@@ -61,7 +63,7 @@ namespace AssuPrototype2
                     }
                     htmlTable.Append("</tbody>");
                     htmlTable.Append("</table>");
-                    DisposedPlaceHolder.Controls.Add(new Literal { Text = htmlTable.ToString() });
+                    DisposedAssetsPlaceHolder.Controls.Add(new Literal { Text = htmlTable.ToString() });
                 }
             }
         }
