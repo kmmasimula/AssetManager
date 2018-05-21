@@ -21,12 +21,14 @@
                        
                         </div>
                         <div class="panel-body">
+                            <!--Row 1--->
                             <div class="row">
                                 <div class="col-lg-5">
                                     <form role="form">
-                                        <div class="form-group">
-                                            <label>CE Number</label>
-                                            <asp:TextBox ID="txtCeNum" runat="server" class="form-control" placeholder="CE Number"></asp:TextBox>
+                                        <label>CE Number</label>
+                                       <div class="form-group input-group">
+                                            <span class="input-group-addon">CE</span>
+                                            <asp:TextBox ID="txtCeNum" runat="server" class="form-control" placeholder="Number"></asp:TextBox>
                                         </div>
                                     </form>
                                 </div>
@@ -35,20 +37,20 @@
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Asset Name</label>
-                                            <asp:TextBox ID="txtAssetname" runat="server" class="form-control" placeholder="Asset Name"></asp:TextBox>
+                                            <asp:TextBox ID="txtAssetName" runat="server" class="form-control" placeholder="Asset Name"></asp:TextBox>
                                         </div>
                                     </form>
                                 </div>
                                 <!-- /.row (nested) -->
                             </div>
 
-
+                            <!--Row 2--->
                             <div class="row">
                                 <div class="col-lg-5">
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Asset Description</label>
-                                            <textarea id="txtImagename1" name="txtImagename1" class="form-control" runat="server" rows="6"></textarea>
+                                            <textarea id="txtAssetDesc" name="txtAssetDesc" class="form-control" rows="10"></textarea>
                                         </div>
                                     </form>
                                 </div>
@@ -64,44 +66,59 @@
                                     <div class="form-group">
                                         <label>Asset Type</label>
                                         <asp:DropDownList ID="drpdwnAssetType" AppendDataBoundItems="true" class="form-control" runat="server"></asp:DropDownList>
-                                        <asp:ListItem Text="<Select Subject>" Value="0" />
+                                        <asp:ListItem Text="<Select Asset Type>" Value="0" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label>Group Code</label>
+                                            <asp:DropDownList ID="drpdwnGroupCode" AppendDataBoundItems="true" class="form-control" runat="server"></asp:DropDownList>
+                                            <asp:ListItem Text="<Select Group Code>" Value="0" />
+                                        </div>
+
                                     </div>
 
                                 </div>
                                 <!-- /.row (nested) -->
                             </div>
 
-
+                            <!--Row 3--->
                             <div class="row">
                                 <div class="col-lg-5">
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Purchase Date</label>
-                                            <input class="form-control" placeholder="Enter text">
+                                            <asp:TextBox ID="txtPurchDate" runat="server" class="form-control" placeholder="Purchase Date"></asp:TextBox>
                                         </div>
                                     </form>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="col-lg-6">
-                                         <div class="form-group">
-                                        <label>Asset Type</label>
-                                        <asp:DropDownList ID="drpdwnGroupCode" AppendDataBoundItems="true" class="form-control" runat="server"></asp:DropDownList>
-                                        <asp:ListItem Text="<Select Group Code>" Value="0" />
-                                    </div>
-                                    </div>
+
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>Purchase Value</label>
+                                            <asp:TextBox ID="txtPurchValue" runat="server" class="form-control" placeholder="Purchase Value"></asp:TextBox>
+                                        </div>
+                                    </form>
                                 </div>
-                                <!-- /.row (nested) -->
+
                             </div>
-                            <asp:Button ID="BtnAddAsset" class="btn btn-primary btn-lg" runat="server" Text="Add Asset" OnClick="BtnAddAsset_Click" />
-                        </div>
-                        <!-- /.panel-body -->
+
+                            <hr />
+                        
+                        <asp:Button ID="BtnAddAsset" class="btn btn-primary btn-lg" runat="server" Text="Add Asset" OnClick="BtnAddAsset_Click" />
+
+                            </div>
+
                     </div>
-                    <!-- /.panel -->
+                    <!-- /.panel-body -->
                 </div>
-                <!-- /.col-lg-12 -->
+                <!-- /.panel -->
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
     </form>
