@@ -24,7 +24,7 @@
                             
                              <asp:PlaceHolder ID="DisposedAssetsPlaceHolder" runat="server"></asp:PlaceHolder>  
 
-                          
+                          <!--sddfd-->
                               
 
                             <!-- /.table-responsive -->
