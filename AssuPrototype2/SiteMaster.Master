@@ -164,6 +164,14 @@
     });
     </script>
 
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-DisposedAssets').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+
 </body>
 
 
